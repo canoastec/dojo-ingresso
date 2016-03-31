@@ -1,10 +1,11 @@
 <?php
-include_once '../src/CalculadoraIngresso.php';
-include '../src/CadeiraSuperior.php';
-include '../src/CadeiraGramado.php';
-include '../src/CadeiraGold.php';
-include '../src/PublicoGeral.php';
-include '../src/SocioGold.php';
+include_once 'src/CalculadoraIngresso.php';
+include_once 'src/CadeiraSuperior.php';
+include_once 'src/CadeiraGramado.php';
+include_once 'src/CadeiraGold.php';
+include_once 'src/PublicoGeral.php';
+include_once 'src/SocioGold.php';
+include_once 'src/SocioChucrute.php';
 
 class CalculadoraIngressoTest extends PHPUnit_Framework_TestCase{
 
@@ -47,6 +48,16 @@ class CalculadoraIngressoTest extends PHPUnit_Framework_TestCase{
 		$resultado = $calculadora->calcular();
 
 		$this->assertEquals(67.50,$resultado);
+	}
+
+	public function  testDeveCalcularIngressoComoOitentaUmCadeiraSuperiorSocioChucrute() {
+		$cadeira = new CadeiraSuperior();
+		$espectador = new SocioChucrute();
+
+		$calculadora = new CalculadoraIngresso($cadeira,$espectador);
+		$resultado = $calculadora->calcular();
+
+		$this->assertEquals(81,$resultado);
 	}
 
 }
