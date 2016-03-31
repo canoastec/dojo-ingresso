@@ -9,7 +9,7 @@ include_once 'src/SocioChucrute.php';
 
 class CalculadoraIngressoTest extends PHPUnit_Framework_TestCase{
 
-	public function testNaoDeveDarDescontoParaPublicoGeralCadeiraSuperior(){
+	public function testDeveCalcularIngressoSemDesconto(){
 		$cadeira = new CadeiraSuperior();
 		$socio = new PublicoGeral();
 
@@ -19,28 +19,7 @@ class CalculadoraIngressoTest extends PHPUnit_Framework_TestCase{
 		$this->assertEquals(90,$resultado);
 	}
 
-	public function testNaoDeveDarDescontoParaPublicoGeralCadeiraGold()
-	{
-		$cadeira = new CadeiraGold();
-		$pagante = new PublicoGeral();
-
-		$calculadora = new CalculadoraIngresso($cadeira, $pagante);
-		$resultado = $calculadora->calcular();
-
-		$this->assertEquals(150, $resultado);
-	}
-
-	public function testNaoDeveDarDescontoParaPublicoGeralCadeiraGramado(){
-		$cadeira = new CadeiraGramado();
-		$pagante = new PublicoGeral();
-
-		$calculadora = new CalculadoraIngresso($cadeira, $pagante);
-		$resultado = $calculadora->calcular();
-
-		$this->assertEquals(120, $resultado);
-	}
-
-	public function testDeveCalcularIngressoComoSessentaESeteComCinquentaCadeiraSuperiorSocioGold(){
+	public function testDeveCalcularIngressoComDesconto(){
 		$cadeira = new CadeiraSuperior();
 		$espectador = new SocioGold();
 
@@ -50,14 +29,5 @@ class CalculadoraIngressoTest extends PHPUnit_Framework_TestCase{
 		$this->assertEquals(67.50,$resultado);
 	}
 
-	public function  testDeveCalcularIngressoComoOitentaUmCadeiraSuperiorSocioChucrute() {
-		$cadeira = new CadeiraSuperior();
-		$espectador = new SocioChucrute();
-
-		$calculadora = new CalculadoraIngresso($cadeira,$espectador);
-		$resultado = $calculadora->calcular();
-
-		$this->assertEquals(81,$resultado);
-	}
 
 }
