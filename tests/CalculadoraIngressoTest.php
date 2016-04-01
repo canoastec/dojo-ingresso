@@ -29,5 +29,15 @@ class CalculadoraIngressoTest extends PHPUnit_Framework_TestCase{
 		$this->assertEquals(67.50,$resultado);
 	}
 
+	public function testDeveDarDezPorcentoDeDescontoQuandoComprarDuasCadeiras(){
+		$socio = new SocioGold();
+		$cadeiras = array(new CadeiraSuperior(), new CadeiraGramado());
+
+		$calculadora = new CalculadoraIngresso($cadeiras, $socio);
+		$resultado = $calculadora->calcular();
+
+		$this->assertEquals($resultado,141.75);
+	}
+
 
 }
