@@ -1,4 +1,5 @@
 <?php
+namespace Dojo;
 
 class Compra{
 

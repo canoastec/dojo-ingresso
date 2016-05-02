@@ -1,5 +1,12 @@
 <?php 
-include_once 'src/FabricaEstrategiaDesconto.php';
+use Dojo\FabricaEstrategiaDesconto;
+use Dojo\Pedido;
+use Dojo\CadeiraGold;
+use Dojo\CadeiraGramado;
+use Dojo\SocioGold;
+use Dojo\Compra;
+
+
 
 class FabricaEstrategiaDescontoTest extends PHPUnit_Framework_TestCase{
 	
@@ -13,7 +20,7 @@ class FabricaEstrategiaDescontoTest extends PHPUnit_Framework_TestCase{
 
 		$estrategia = FabricaEstrategiaDesconto::criar($compra);
 
-		$this->assertInstanceOf('EstrategiaDezPorcento', $estrategia);
+		$this->assertInstanceOf('Dojo\Estrategias\EstrategiaDezPorcento', $estrategia);
 
 
 	}
@@ -27,7 +34,7 @@ class FabricaEstrategiaDescontoTest extends PHPUnit_Framework_TestCase{
 
 		$estrategia = FabricaEstrategiaDesconto::criar($compra);
 
-		$this->assertInstanceOf('EstrategiaSemDesconto', $estrategia);
+		$this->assertInstanceOf('Dojo\Estrategias\EstrategiaSemDesconto', $estrategia);
 
 
 	}

@@ -1,13 +1,15 @@
 <?php
-	include_once "Espectador.php";
+namespace Dojo;
 
-	class SocioChucrute implements Espectador{
-		public function getDesconto()
-		{
-			return 10;
-		}
+use Dojo\Espectador;
 
-
+class SocioChucrute implements Espectador{
+	
+	public function getDesconto(){
+		return 10;
 	}
+
+
+}
 
  ?>

@@ -1,5 +1,9 @@
 <?php 
-include_once 'src/Pedido.php';
+use Dojo\Pedido;
+use Dojo\CadeiraGold;
+use Dojo\CadeiraGramado;
+use Dojo\CadeiraSuperior;
+
 
 class PedidoTest extends PHPUnit_Framework_TestCase{
 	function testDeveAdicionarItensAoPedido(){

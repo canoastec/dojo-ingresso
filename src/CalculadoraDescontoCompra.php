@@ -1,9 +1,9 @@
 <?php
-class CalculadoraDescontoCompra
-{
+namespace Dojo;
 
-	public function calcular()
-	{
+class CalculadoraDescontoCompra{
+
+	public function calcular(){
 		return 141.75;
 	}
 }

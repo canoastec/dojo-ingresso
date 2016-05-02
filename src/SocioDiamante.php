@@ -1,10 +1,11 @@
 <?php
+namespace Dojo;
 
-class SocioDiamante implements Espectador
-{
+use Dojo\Espectador;
 
-	public function getDesconto()
-	{
+class SocioDiamante implements Espectador{
+
+	public function getDesconto(){
 		return 50;
 	}
 }

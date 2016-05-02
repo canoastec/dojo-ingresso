@@ -1,5 +1,6 @@
 <?php
-	//include_once 'Espectador.php';
+	namespace Dojo\Estrategias;
+
 
 	class EstrategiaDezPorcento{
 

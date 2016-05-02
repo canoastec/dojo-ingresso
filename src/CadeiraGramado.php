@@ -1,5 +1,7 @@
 <?php
-include_once 'Cadeira.php';
+namespace Dojo;
+
+use Dojo\Cadeira;
 
 class CadeiraGramado  implements Cadeira{
 

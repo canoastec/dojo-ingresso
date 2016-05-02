@@ -1,6 +1,9 @@
 <?php
-include_once 'Estrategias/EstrategiaDezPorcento.php';
-include_once 'Estrategias/EstrategiaSemDesconto.php';
+namespace Dojo;
+
+use Dojo\Estrategias\EstrategiaDezPorcento;
+use Dojo\Estrategias\EstrategiaSemDesconto;
+
 class FabricaEstrategiaDesconto{
 
 	public static function criar(Compra $compra){

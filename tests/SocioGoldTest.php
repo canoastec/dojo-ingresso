@@ -1,5 +1,5 @@
 <?php
-include_once 'src/SocioGold.php';
+use Dojo\SocioGold;
 
 class SocioGoldTest extends PHPUnit_Framework_TestCase{
 

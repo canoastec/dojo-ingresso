@@ -1,5 +1,5 @@
 <?php
-include_once 'src/SocioChucrute.php';
+use Dojo\SocioChucrute;
 
 
 class SocioChucruteTest extends PHPUnit_Framework_TestCase

@@ -1,4 +1,6 @@
 <?php
+namespace Dojo;
+
 
 class CompraIngresso{
 

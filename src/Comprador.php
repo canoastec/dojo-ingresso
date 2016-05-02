@@ -1,6 +1,6 @@
 <?php
-interface Comprador{
+namespace Dojo;
 
-}
+interface Comprador{}
 
  ?>

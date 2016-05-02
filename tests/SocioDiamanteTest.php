@@ -1,6 +1,5 @@
 <?php
-
-include_once 'src/SocioDiamante.php';
+use Dojo\SocioDiamante;
 
 class SocioDiamanteTest extends PHPUnit_Framework_TestCase{
 

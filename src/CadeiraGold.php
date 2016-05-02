@@ -1,5 +1,7 @@
 <?php
-include_once 'Cadeira.php';
+namespace Dojo;
+
+use Dojo\Cadeira;
 
 class CadeiraGold implements Cadeira{
 

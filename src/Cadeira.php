@@ -1,5 +1,7 @@
 <?php
-include_once 'src/Item.php';
+namespace Dojo;
+
+use Dojo\Item;
 
 interface Cadeira extends Item{
 

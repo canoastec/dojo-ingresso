@@ -1,12 +1,14 @@
 <?php
-	include_once 'Espectador.php';
+namespace Dojo;
 
-	class SocioGold implements Espectador{
+use Dojo\Espectador;
+	
+class SocioGold implements Espectador{
 
-		public function getDesconto(){
-			return 25;
-		}
-
+	public function getDesconto(){
+		return 25;
 	}
+
+}
 
  ?>

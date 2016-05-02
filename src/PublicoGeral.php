@@ -1,5 +1,7 @@
 <?php
-include_once 'Espectador.php';
+namespace Dojo;
+
+use Dojo\Espectador;
 
 class PublicoGeral implements Espectador{
 

@@ -1,7 +1,9 @@
 <?php
-
-include_once "src/CompraIngresso.php";
-include_once "src/CalculadoraDescontoCompra.php";
+use Dojo\CompraIngresso;
+use Dojo\CalculadoraDescontoCompra;
+use Dojo\SocioGold;
+use Dojo\CadeiraSuperior;
+use Dojo\CadeiraGramado;
 
 class CalculadoraDescontoCompraTest  extends PHPUnit_Framework_TestCase {
 

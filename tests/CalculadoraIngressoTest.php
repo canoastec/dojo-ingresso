@@ -1,11 +1,12 @@
 <?php
-include_once 'src/CalculadoraIngresso.php';
-include_once 'src/CadeiraSuperior.php';
-include_once 'src/CadeiraGramado.php';
-include_once 'src/CadeiraGold.php';
-include_once 'src/PublicoGeral.php';
-include_once 'src/SocioGold.php';
-include_once 'src/SocioChucrute.php';
+use Dojo\CalculadoraIngresso;
+use Dojo\CadeiraSuperior;
+use Dojo\CadeiraGramado;
+use Dojo\CadeiraGold;
+use Dojo\PublicoGeral;
+use Dojo\SocioGold;
+use Dojo\SocioChucrute;
+
 
 class CalculadoraIngressoTest extends PHPUnit_Framework_TestCase{
 
