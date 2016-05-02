@@ -1,7 +1,7 @@
 <?php
-interface Cadeira{
+include_once 'src/Item.php';
 
-	public function getPreco();
+interface Cadeira extends Item{
 
 }
 
