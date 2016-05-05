@@ -12,10 +12,7 @@ class FabricaEstrategiaDesconto{
 			return new EstrategiaDezPorcento();
 		}
 
-		if($compra->getPedido()->contarItens() == 1) {
-			return new EstrategiaSemDesconto();
-		}
-
+		return new EstrategiaSemDesconto();
 	}
 
 }

@@ -10,7 +10,7 @@ use Dojo\Compra;
 
 class FabricaEstrategiaDescontoTest extends PHPUnit_Framework_TestCase{
 	
-	public function testDeveRetornarEstrategiaDeDezPorcentoDeDescontoParaCompraComMaisDeUmItem(){
+	public function testDeveRetornarEstrategiaDeDezPorcentoDeDescontoParaPedidoComMaisDeUmItem(){
 
 		$pedido = new Pedido();
 		$pedido->addItem(new CadeiraGold());
@@ -21,11 +21,9 @@ class FabricaEstrategiaDescontoTest extends PHPUnit_Framework_TestCase{
 		$estrategia = FabricaEstrategiaDesconto::criar($compra);
 
 		$this->assertInstanceOf('Dojo\Estrategias\EstrategiaDezPorcento', $estrategia);
-
-
 	}
 
-	public function testDeveRetornarEstrategiaSemDescontoParaCompraComUmItem(){
+	public function testDeveRetornarEstrategiaSemDescontoParaPedidoComUmItem(){
 
 		$pedido = new Pedido();
 		$pedido->addItem(new CadeiraGold());
@@ -35,8 +33,16 @@ class FabricaEstrategiaDescontoTest extends PHPUnit_Framework_TestCase{
 		$estrategia = FabricaEstrategiaDesconto::criar($compra);
 
 		$this->assertInstanceOf('Dojo\Estrategias\EstrategiaSemDesconto', $estrategia);
+	}
 
+	public function testDeveRetornarEstrategiaSemDescontoParaPedidoSemItens(){
+		$pedido = new Pedido();
+		$comprador = new SocioGold();
+		$compra = new Compra($pedido, $comprador);
 
+		$estrategia = FabricaEstrategiaDesconto::criar($compra);
+
+		$this->assertInstanceOf('Dojo\Estrategias\EstrategiaSemDesconto', $estrategia);
 	}
 
 }
