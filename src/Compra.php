@@ -15,6 +15,10 @@ class Compra{
 		return $this->pedido;
 	}
 
+	public function getValor(){
+		return 100;
+	}
+
 }
 
  ?>
